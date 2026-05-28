@@ -29,7 +29,6 @@ The goal of this project is to create a live data pipeline that tracks weather c
 ## 🎥 Project Demo
 
 
-
 https://github.com/user-attachments/assets/fc7705bd-05ee-4b2c-8cab-3787d0f9eb1a
 
 
