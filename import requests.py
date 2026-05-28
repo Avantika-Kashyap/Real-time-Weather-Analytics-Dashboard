@@ -1,17 +1,18 @@
 import requests
-
-# Aapki website se mili hui sahi API key
-API_KEY = "cea0c033109a776a3a22721face4914d" 
+import os
+from dotenv import load_dotenz
+load_dotenz()
+API_KEY = os.environ.get("MY_WEATHER_KEY")
+if not API_KEY:
+    API_KEY = "YOUR_API_KEY_HERE"
 CITY = "Lucknow"
 
-# URL jahan se weather ka data aayega
 url = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric"
 
 try:
     # API ko request bhej rahe hain
     response = requests.get(url)
     
-    # Agar status code 200 hai toh sab sahi hai
     if response.status_code == 200:
         data = response.json()
         print("--- LIVE DATA FETCHED SUCCESSFULLY ---")
@@ -37,9 +38,6 @@ except Exception as e:
     import requests
 import pandas as pd # Agar error aaye toh terminal mein 'pip install pandas' chalana
 from datetime import datetime
-
-# Aapki verified API Key
-API_KEY = "cea0c033109a776a3a22721face4914d" 
 
 # Un cities ki list jinka data humein chahiye
 CITIES = ["Lucknow", "Delhi", "Mumbai", "Bangalore", "Kolkata"]
@@ -78,6 +76,6 @@ df = pd.DataFrame(weather_data_list)
 print("\n--- PROCESSED DATA FRAME ---")
 print(df)
 
-# 3. Data ko CSV file mein save karna taaki Dashboard isse read kare
 df.to_csv("live_weather_data.csv", index=False)
 print("\n💾 Data saved successfully as 'live_weather_data.csv'!")
+
