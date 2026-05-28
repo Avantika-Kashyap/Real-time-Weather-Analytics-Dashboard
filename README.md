@@ -1,8 +1,4 @@
-
-
-https://github.com/user-attachments/assets/7ed23719-bf3b-4336-9648-92344d45ee96
-
- # 🌤️ Real-Time Weather Analytics Dashboard
+# 🌤️ Real-Time Weather Analytics Dashboard
 
 A Python-based data analytics project that fetches live weather data from an API, stores it in a structured format, and visualizes key insights through an interactive frontend dashboard.
 
@@ -35,6 +31,7 @@ The goal of this project is to create a live data pipeline that tracks weather c
 
 
 https://github.com/user-attachments/assets/fc7705bd-05ee-4b2c-8cab-3787d0f9eb1a
+
 
 
 
